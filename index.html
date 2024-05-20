@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #user-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+
+   .user-card {
+        border: 5px solid grey;
+        border-radius: 20px;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+   .user-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        box-shadow: 20px color green;
+    }
+
+   .buttons-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+   .info-button,.delete-button {
+        background-color: transparent;
+        border: 2px solid grey;
+        border-radius: 20px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+   .info-button {
+        color: green;
+    }
+
+   .delete-button {
+        color: salmon;
+    }
+
+</style>
+</head>
+<body>
+  <h1>Registration Form</h1>
+  <form id="registrationForm">
+    <fieldset>
+      <label  for="first-name">First Name:</label>
+      <input  type="text" id="first-name" name="first-name" >
+      
+      <label for="last-name">Last Name:</label>
+      <input type="text" id="last-name" name="last-name">
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+      
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password">
+      
+      <label for="confirm-password">Confirm Password:</label>
+      <input type="password" id="confirm-password" name="confirm-password">
+      
+      <label for="description">Description:</label>
+      <textarea id="description" name="description"></textarea>
+    </fieldset>
+    
+    <button type="submit">Register</button>
+  </form>
+
+
+  <input type="text" id="inputField" placeholder="Enter something...">
+    <button id="addToListBtn">Add to List</button>
+    <ul id="outputList"></ul>
+
+    <ul id="personList"></ul>
+
+
+    <div id="user-list"></div>
+  <script src="script.js"></script>
+</body>
+</html>
